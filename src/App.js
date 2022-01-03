@@ -1,4 +1,5 @@
 export default function App() {
+  let list = [1, 1, 1, 1, 1, 1, 1, 1, 1];
   return (
     <div className="container-fluid">
       <div className="row bg-dark text-white sticky-top ">
@@ -8,18 +9,11 @@ export default function App() {
       </div>
 
       <div className="row mt-2 ">
-        <div className="col-sm-12 col-md-4 mb-2">
-          <MyCard />
-        </div>
-        <div className="col-sm-12 col-md-4 mb-2">
-          <MyCard />
-        </div>
-        <div className="col-sm-12 col-md-4 mb-2">
-          <MyCard />
-        </div>
-        <div className="col-sm-12 col-md-4 mb-2">
-          <MyCard />
-        </div>
+        {list.map((item) => (
+          <div className="col-sm-12 col-md-4 mb-2">
+            <MyCard />
+          </div>
+        ))}
       </div>
     </div>
   );
